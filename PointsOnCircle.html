@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Circle!</title>
+    <link type="text/css" rel="stylesheet" href="PointsOnCircle.css">
+</head>
+
+<body>
+
+    <div id="mainContainer">
+        <div class="pointsBar" id="titles">
+            <span class="red">X</span>
+            <span class="green">Y</span>
+            <span class="blue">Z</span>
+            <span class="black">M</span>
+        </div>
+        <div class="pointsBar up">
+            <span>
+                <span class="button"></span>
+            </span>
+            <span>
+                <span class="button"></span>
+            </span>
+            <span>
+                <span class="button"></span>
+            </span>
+            <span>
+                <span class="button"></span>
+            </span>
+        </div>
+        <div class="pointsBar">
+            <span>
+                <span class="button left"></span>
+                <span class="button placeholder"></span>
+                <span class="button right"></span>
+            </span>
+            <span>
+                <span class="button left"></span>
+                <span class="button placeholder"></span>
+                <span class="button right"></span>
+            </span>
+            <span>
+                <span class="button left"></span>
+                <span class="button placeholder"></span>
+                <span class="button right"></span>
+            </span>
+            <span>
+                <span class="button left"></span>
+                <span class="button placeholder"></span>
+                <span class="button right"></span>
+            </span>
+        </div>
+        <div class="pointsBar down">
+            <span>
+                <span class="button"></span>
+            </span>
+            <span>
+                <span class="button"></span>
+            </span>
+            <span>
+                <span class="button"></span>
+            </span>
+            <span>
+                <span class="button"></span>
+            </span>
+        </div>
+        <div id="buttonContainer">
+            <div class="buttonSpecial" id="random">Random Points!</div>
+            <div id="radius">radius: 0.0</div>
+            <div class="buttonSpecial" id="relocate">Relocate!</div>
+        </div>
+    </div>
+    <div id="zoomInContainer">
+        <div id="zoomInFactorDisplay">1.00</div>
+        <div class="button">+</div>
+        <div class="button">-</div>
+        <div class="button">x</div>
+    </div>
+    <canvas></canvas>
+    <script src="PointOnCircle.js"></script>
+</body>
+
+</html>

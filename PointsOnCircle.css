@@ -1,0 +1,149 @@
+body {
+    margin: 0px;
+    font-family: Helvetica;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6.5em;
+}
+
+#radius{
+    font-size:2em;
+}
+
+#titles {
+    height: 2em;
+    font-size: 1.5em;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.black{
+    color: black;
+}
+
+.button {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.placeholder {
+    cursor: auto;
+    transition-duration: 0s;
+}
+
+.up .button, .down .button, .left, .right, #zoomInContainer .button {
+    background-color: rgba(100, 100, 100, 0.2);
+    transition-duration: 0.5s;
+}
+
+.up .button, .down .button, .left, .right {
+    background-image: url("arrow.png");
+    border-radius: 10em;
+}
+
+.up .button:active, .down .button:active, .left:active, .right:active, #zoomInContainer .button:active {
+    background-color: rgba(100, 100, 100, 0.5);
+    transition-duration: 0.5s;
+}
+
+.up .button {
+    transform: rotate(270deg);
+}
+
+.left {
+    transform: rotate(180deg);
+}
+
+.right {
+    transform: rotate(0deg);
+}
+
+.down .button {
+    transform: rotate(90deg);
+}
+
+.pointsBar {
+    height: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+canvas {
+    border: 1px solid black;
+    position: absolute;
+    background: rgba(100, 100, 100, 0.2);
+}
+
+.buttonSpecial {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #538fbe;
+    width: 10em;
+    height: 2.5em;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 2.5em;
+    border: 1px solid #2d6898;
+    background-image: linear-gradient(bottom, rgb(73, 132, 180) 0%, rgb(97, 155, 203) 100%);
+    border-radius: 5px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0, 0, 0, .4), inset 0px 1px 0px rgba(255, 255, 255, .3), inset 0px 0px 3px rgba(255, 255, 255, .5);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.buttonSpecial:active {
+    background-image: linear-gradient(bottom, rgb(88, 154, 204) 0%, rgb(90, 150, 199) 100%);
+    box-shadow: 0px 2px 0px #2b638f, 0px 1px 6px rgba(0, 0, 0, .4), inset 0px 1px 0px rgba(255, 255, 255, .3), inset 0px 0px 3px rgba(255, 255, 255, .5);
+    transform: translate(0, 4px);
+    transition: all .2s ease-in-out;
+}
+
+#zoomInContainer {
+    position: absolute;
+    top: 50vh;
+    left: 95.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 6em;
+    font-size: 2em;
+}
+
+#zoomInContainer .button{
+    width:1.5em;
+    height:1.5em;
+    text-align:center;
+    line-height: 1.5em;
+    border-radius: 0.1em;
+}
